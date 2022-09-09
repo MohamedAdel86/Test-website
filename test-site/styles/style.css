@@ -1,0 +1,22 @@
+body {background-color:antiquewhite;}
+
+.container{  display: flex;
+    flex-flow: column wrap;
+    font: 30px sans-serif;
+    color:blueviolet;
+    justify-content: center;
+    align-items: center;
+}
+#p2 {font: 40px sans-serif;}
+
+button { background-color: blanchedalmond;
+    border-color: brown;
+    width: 100px;
+    height: 40px;
+    font: bold 20px sans-serif;
+    color:brown;
+    margin: 20px;
+    border-width: 2px}
+
+
+
