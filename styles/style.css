@@ -1,124 +1,134 @@
 /*body*/
-body {background-color:antiquewhite;
-color:rgb(131, 0, 37);
-text-shadow: 0px 1px 0px rgb(191, 71, 117);
+body {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-template-rows: 150px 1fr 40px;
+  grid-gap: 10px;
+  background-color: antiquewhite;
+  color: rgb(131, 0, 37);
+  text-shadow: 0px 1px 0px rgb(191, 71, 117);
 }
 
 /*header*/
-header {display: flex;
-flex-flow: column ;
-align-items: center;
-justify-content: center;
-font: 30px sans-serif;
+header {
+  grid-column: 1/3;
+  text-align: center;
+  font: 30px sans-serif;
 }
 
 
 /*nav*/
-nav {display:flex;
-flex: row wrap;
-gap: .625%;
-justify-content: center;
-width: 100%;
-height: 60px;
-margin-top: 40px;
-margin-bottom: 40px;}
+nav {
+  grid-column: 1;
+  grid-row: 2/4;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  position: fixed;
 
-button {text-shadow: 0px 1px 0px rgb(191, 71, 117);
-    background-color: blanchedalmond;
-    border-style: solid;
-    border-color: brown;
-    border-radius: 15px;
-    border-width: 2px;
-    font: bold 20px sans-serif;
-    color:brown;
-    height: 50px;
-    padding: 10px;
-    }
-button:hover{
+}
+
+button {
+  block-size: auto;
+  inline-size: 55%;
+  text-shadow: 0px 1px 0px rgb(191, 71, 117);
+  background-color: blanchedalmond;
+  border-style: solid;
+  border-color: brown;
+  border-radius: 15px;
+  border-width: 2px;
+  font: bold 20px sans-serif;
+  color: brown;
+  padding: 10px;
+}
+
+button:hover {
   background-color: rgb(246, 152, 95);
-  cursor:pointer;
+  cursor: pointer;
 }
+
 /*main*/
-main{  display: flex;
-    flex-flow: row wrap;
-    font: 30px sans-serif;
-    justify-content:space-between;
-    align-items: start;
-    line-height: 1.75;
-    margin: 5% 12.5% 5% 12.5%;
-    width:auto;
+main {
+  grid-column: 2;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-template-rows: 2fr .2fr 1fr;
+  gap: 0px;
+  font: 30px sans-serif;
+  line-height: 1.75;
 }
-p {inline-size: 60%;
-  display:flex;
-  flex-flow: row wrap;
-  align-items: start;
-  height: auto;
-  width: 35%;
+
+p {grid-column: 1;
+  grid-row: 1/2;
   font: 18px sans-serif;
   border-style: solid;
-    border-radius: 30px;
-    padding: 20px;
-    background-color: blanchedalmond;
-    margin: 5% 0% 5% 5%;
-}
-
-    p.about {inline-size: 60%;
-      display:flex;
-      flex-flow: row wrap;
-      align-items: start;
-      height: auto;
-      border-style: solid;
-        border-radius: 30px;
-        margin: 5% 5% 5% 5%;
-        padding-bottom: 20%;
-        padding-right: 10%;
-        padding-left: 20px;
-        padding-top: 20px;
-        background-color: blanchedalmond;}
-
-#song-part {
-  display:flex;
-flex-flow: column;
-align-items: start;
-height: auto;
-width: auto;
-border-style: solid;
   border-radius: 30px;
+  padding: 20px;
   background-color: blanchedalmond;
-  margin: -10% 5% 5% 1%;
-
 }
 
-#song-name {padding: 10px;
-  margin-right: 20px;
-}
-#song {padding: 10px;
-
-}
-#image-part{
+#song-part {grid-column: 1;
+  grid-row: 2/3;
   display: flex;
-  flex-flow:column wrap;
-  align-items: center;
-  justify-content: start;
-  margin: 2% 5% 5% 0%;
-
-}
-#image-header{font-size: 20px;
-margin-bottom:-20px;}
-img {    
+  flex-flow: column;
+  align-items: start;
   border-style: solid;
   border-radius: 30px;
-  width:500px;
-  height:500px;
+  background-color: blanchedalmond;
 
-    cursor: pointer;
-object-fit: cover;
+}
+#song-name {
+  padding: 10px;
+  margin-right: 20px;
+}
+#song {
+  padding: 10px;
+
 }
 
-footer {display: flex;
-    flex-flow: row;
-    justify-content:center;
-    margin-top: 10%;
-    margin-bottom: 20px;
-    font: 15px sans-serif;
-    }
+#image-part { grid-column: 2;
+  grid-row: 1/4;
+  display: flex;  
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: start;
+
+}
+
+#image-header {
+  font-size: 20px;
+  margin-bottom: -20px;
+}
+
+img.cat {
+  border-style: solid;
+  border-radius: 30px;
+  width: 650px;
+  height: 650px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+#uncanny-incredible {
+  grid-column: 2;
+  grid-row: 3/4;
+  margin-left: 1%;
+  inline-size: 50px;
+  opacity: .2;
+  border-radius: 60px;
+}
+
+footer {
+  grid-column: 2;
+  grid-row: 3/4;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  font: 15px sans-serif;
+}
