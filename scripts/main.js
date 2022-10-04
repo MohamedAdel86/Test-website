@@ -34,9 +34,7 @@ function setusername() {
     } 
 }
 
-if (!(localStorage.getItem('name'))) {
-    setusername();
-  } else {
+if ((localStorage.getItem('name'))) {
     const storedName = localStorage.getItem('name');
     myHeading.textContent = `Hello, ${storedName}. I'm a cat`;
   }
