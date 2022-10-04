@@ -1,0 +1,144 @@
+/*body*/
+body {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-template-rows: 100px 1fr 40px;
+  grid-gap: 30px;
+  background-color: antiquewhite;
+  color: rgb(131, 0, 37);
+  text-shadow: 0px 1px 0px rgb(191, 71, 117);
+  margin: 0;
+}
+
+/*header*/
+header {
+  grid-column: 1/3;
+  font: 15px sans-serif;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0px;
+  padding-left: 38.5px;
+  background-color: blanchedalmond;
+  border-bottom:2px solid;
+  z-index: 1;
+}
+a{color: inherit;
+text-decoration: inherit;}
+
+
+/*nav*/
+nav {
+  grid-column: 1;
+  grid-row: 2/4;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 150px;
+  height:100%;
+  position: fixed;
+}
+
+button {
+  block-size: auto;
+  inline-size: 55%;
+  color: rgb(131, 0, 37);
+  text-shadow: 0px 1px 0px rgb(191, 71, 117);
+  background-color: blanchedalmond;
+  border: 2px solid;
+  border-radius: 15px;
+  font: bold 20px sans-serif;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: rgb(246, 152, 95);
+  cursor: pointer;
+}
+
+/*main*/
+main {
+  grid-column: 2;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-template-rows: 2fr .2fr 1fr;
+  gap: 30px;
+  font: 30px sans-serif;
+  line-height: 1.75;
+}
+
+p {grid-column: 1;
+  grid-row: 1/2;
+  font: 18px sans-serif;
+  border: 2px solid;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: blanchedalmond;
+  margin:0;
+  margin-top: 30px;
+}
+
+#song-part {grid-column: 1;
+  grid-row: 2/3;
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  border: 2px solid;
+  border-radius: 30px;
+  background-color: blanchedalmond;
+
+}
+#song-name {
+  padding: 10px;
+  margin-right: 20px;
+}
+#song {
+  padding: 10px;
+
+}
+
+#image-part { grid-column: 2;
+  grid-row: 1/4;
+  display: flex;  
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: start;
+
+}
+
+#image-header {
+  font-size: 20px;
+  margin-bottom: -20px;
+}
+
+img.cat {
+  border: 2px solid;
+  border-radius: 30px;
+  width: 650px;
+  height: 650px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.uncanny {
+  grid-column: 2;
+  grid-row: 3/4;
+  margin-left: 1%;
+  inline-size: 50px;
+  block-size: 50px;
+  opacity: .2;
+  border-radius: 60px;
+}
+
+footer {
+  grid-column: 2;
+  grid-row: 3/4;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  font: 15px sans-serif;
+}
